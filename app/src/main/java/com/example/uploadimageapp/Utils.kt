@@ -1,4 +1,4 @@
-package net.simplifiedcoding.imageuploader
+package com.example.uploadimageapp
 
 import android.content.ContentResolver
 import android.net.Uri

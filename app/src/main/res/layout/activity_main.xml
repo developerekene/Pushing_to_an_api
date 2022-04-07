@@ -5,7 +5,7 @@
     android:id="@+id/layout_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.uploadimageapp.MainActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -13,17 +13,26 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Image Uploader"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/image_view"
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:layout_margin="24dp"
-            app:srcCompat="@drawable/ic_picture" />
+            app:srcCompat="@drawable/imageup_1" />
 
         <TextView
             android:id="@+id/textView"
@@ -31,8 +40,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:fontFamily="sans-serif-light"
-            android:text="Tap to Select Image"
-            android:textSize="24sp" />
+            android:text="Tap Icon above to select an Image"
+            android:textSize="18sp" />
 
         <ProgressBar
             android:id="@+id/progress_bar"
@@ -46,12 +55,15 @@
 
     <Button
         android:id="@+id/button_upload"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Upload"
+        android:text="Upload Image"
+        android:textColor="@android:color/background_light"
+        android:background="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

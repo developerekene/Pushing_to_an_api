@@ -1,4 +1,4 @@
-package net.simplifiedcoding.imageuploader
+package com.example.uploadimageapp
 
 data class UploadResponse(
     val error: Boolean,

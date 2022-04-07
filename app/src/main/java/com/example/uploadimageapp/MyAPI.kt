@@ -1,4 +1,4 @@
-package net.simplifiedcoding.imageuploader
+package com.example.uploadimageapp
 
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -12,16 +12,16 @@ import retrofit2.http.Part
 interface MyAPI {
 
     @Multipart
-    @POST("Api.php?apicall=upload")
+    @POST("api/v1/upload")
     fun uploadImage(
-        @Part image: MultipartBody.Part,
-        @Part("desc") desc: RequestBody
+        @Part image: MultipartBody.Part
+//        @Part("desc") desc: RequestBody
     ): Call<UploadResponse>
 
     companion object {
         operator fun invoke(): MyAPI {
             return Retrofit.Builder()
-                .baseUrl("http://10.10.10.118/ImageUploader/")
+                .baseUrl("https://darot-image-upload-service.herokuapp.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(MyAPI::class.java)

@@ -1,4 +1,4 @@
-package net.simplifiedcoding.imageuploader
+package com.example.uploadimageapp
 
 import android.os.Handler
 import android.os.Looper
